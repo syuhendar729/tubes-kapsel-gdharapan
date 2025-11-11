@@ -12,6 +12,7 @@
   gap: 1rem;
   margin: 0;
   padding: 0.75rem 1rem;
+  margin-left: 1rem;
 }
 .app-navbar a {
   color: white;

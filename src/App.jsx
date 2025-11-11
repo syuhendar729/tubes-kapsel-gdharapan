@@ -1,4 +1,4 @@
-// import './App.css'
+import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Beranda from './pages/Beranda'
@@ -9,9 +9,8 @@ import Kontak from './pages/Kontak'
 function App() {
   return (
     <Router>
-      {/* <div className="App"> */}
         <Navbar />
-        <main style={{ padding: '1rem' }}>
+        <main>
           <Routes>
             <Route path="/" element={<Beranda />} />
             <Route path="/produk" element={<Produk />} />
@@ -19,7 +18,14 @@ function App() {
             <Route path="/kontak" element={<Kontak />} />
           </Routes>
         </main>
-      {/* </div> */}
+      
+        <footer className="site-footer">
+          <div className="footer-inner">
+            <div className="footer-left">Website informasi UMKM di Desa Gedong Harapan</div>
+            <div className="footer-right">Desa Gedong Harapan</div>
+          </div>
+          <div className="footer-bar">Copyright © 2025 - UMKM Desa Gedong Harapan</div>
+        </footer>
     </Router>
   )
 }

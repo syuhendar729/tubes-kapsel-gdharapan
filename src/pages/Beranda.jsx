@@ -9,6 +9,7 @@ export default function Beranda() {
           <p>
             Temukan produk otentik langsung dari pengrajin dan pelaku usaha di Desa Gedong Harapan. Nikmati kelezatan keripik pisang premium kami dan beragam makanan pembuatan rumahan yang higienis dan berkualitas. Setiap pembelian Anda adalah dukungan nyata bagi kemajuan ekonomi lokal.
           </p>
+          <h3>Belanja Sekarang dan Cari Kebutuhanmu!</h3>
           <div className="hero-cta">
             <button className="cta">Shop Now</button>
           </div>
@@ -39,7 +40,7 @@ export default function Beranda() {
               </div>
               <div className="card-body">
                 <h3>Product {i + 1}</h3>
-                <p className="price">Rp. NaN,00</p>
+                <p className="price">Rp 15.000,00</p>
                 <button className="more">➜</button>
               </div>
             </article>
@@ -51,13 +52,6 @@ export default function Beranda() {
         </div>
       </section>
 
-      <footer className="site-footer">
-        <div className="footer-inner">
-          <div className="footer-left">Website informasi UMKM di Desa Gedong Harapan</div>
-          <div className="footer-right">Desa Gedong Harapan</div>
-        </div>
-        <div className="footer-bar">Copyright © 2025 - UMKM Desa Gedong Harapan</div>
-      </footer>
     </div>
   )
 }
