@@ -1,0 +1,23 @@
+.app-navbar {
+  background: #6B4226;
+  color: white;
+  /* Make the navbar span the full viewport width even if the app root is centered */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
+}
+.app-navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0.75rem 1rem;
+}
+.app-navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.app-navbar a:hover {
+  text-decoration: underline;
+}

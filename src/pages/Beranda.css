@@ -1,0 +1,188 @@
+/* Styles for Beranda page */
+.beranda {
+  color: #fff;
+  font-family: inherit;
+  background: linear-gradient(#7b4b33, #b98360);
+}
+
+.hero {
+  height: 460px;
+  /* Use local hero image. Place your image at public/img/hero.jpg */
+  background-image: url('/img/hero.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  width: 100%;
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+}
+
+.hero-overlay h1 {
+  font-size: 2.25rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.hero-overlay p {
+  max-width: 900px;
+  margin: 0 auto 1.25rem auto;
+  opacity: 0.95;
+}
+
+.cta {
+  background: #f2f2f2;
+  color: #222;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.umkm {
+  padding: 2.25rem 1rem 1.25rem;
+  text-align: center;
+  background: linear-gradient(#7b4b33, #b98360);
+}
+
+.umkm h2 {
+  margin-bottom: 1rem;
+}
+
+.companies-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.companies {
+  border: 4px solid rgba(255,255,255,0.6);
+  padding: 1.25rem 2rem;
+  border-radius: 40px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.company {
+  background: #e9e7e3;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.products {
+  padding: 2rem 1rem 3rem;
+  text-align: center;
+  background: linear-gradient(#b98360, #d9b892);
+}
+
+.product-container {
+  margin: 1rem auto 1.25rem;
+  max-width: 1100px;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.card {
+  background: #fff;
+  color: #222;
+  width: 220px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-image img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 0.75rem;
+  position: relative;
+}
+
+.card-body h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+}
+
+.price {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.more {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background: #222;
+  color: #fff;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.show-more {
+  margin-top: 0.75rem;
+}
+
+.btn-secondary {
+  background: #2f3640;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  background: transparent;
+  color: #2c1b12;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-bar {
+  background: #6b4226;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 800px) {
+  .product-container {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .card {
+    width: 160px;
+  }
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+}
