@@ -9,6 +9,7 @@ export default function Beranda() {
           <p>
             Temukan produk otentik langsung dari pengrajin dan pelaku usaha di Desa Gedong Harapan. Nikmati kelezatan keripik pisang premium kami dan beragam makanan pembuatan rumahan yang higienis dan berkualitas. Setiap pembelian Anda adalah dukungan nyata bagi kemajuan ekonomi lokal.
           </p>
+          <h3>Belanja Sekarang dan Cari Kebutuhanmu!</h3>
           <div className="hero-cta">
             <button className="cta">Shop Now</button>
           </div>
