@@ -1,7 +1,7 @@
-export default function Kontak() {
+export default function Contact() {
   return (
     <div>
-      <h1>Kontak</h1>
+      <h1>Kontal</h1>
       <p>Hubungi kami di: info@example.com</p>
     </div>
   )

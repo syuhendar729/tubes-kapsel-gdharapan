@@ -1,10 +1,11 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Beranda from './pages/Beranda'
-import Produk from './pages/Produk'
-import TentangKami from './pages/TentangKami'
-import Kontak from './pages/Kontak'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import AboutUs from './pages/AboutUs'
+import Contact from './pages/Contact'
+import ProductDetail from './pages/ProductDetail'
 
 function App() {
   return (
@@ -12,10 +13,11 @@ function App() {
         <Navbar />
         <main>
           <Routes>
-            <Route path="/" element={<Beranda />} />
-            <Route path="/produk" element={<Produk />} />
-            <Route path="/tentang" element={<TentangKami />} />
-            <Route path="/kontak" element={<Kontak />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/produk/:id" element={<ProductDetail />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
       
