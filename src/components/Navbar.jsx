@@ -6,9 +6,9 @@ export default function Navbar() {
     <nav className="app-navbar">
       <ul>
         <li><Link to="/">Beranda</Link></li>
-        <li><Link to="/produk">Produk</Link></li>
-        <li><Link to="/tentang">Tentang Kami</Link></li>
-        <li><Link to="/kontak">Kontak</Link></li>
+        <li><Link to="/products">Produk</Link></li>
+        <li><Link to="/aboutus">Tentang Kami</Link></li>
+        <li><Link to="/contact">Kontak</Link></li>
       </ul>
     </nav>
   )

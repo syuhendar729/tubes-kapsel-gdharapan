@@ -1,4 +1,4 @@
-export default function TentangKami() {
+export default function AboutUs() {
   return (
     <div>
       <h1>Tentang Kami</h1>

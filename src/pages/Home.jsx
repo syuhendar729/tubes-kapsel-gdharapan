@@ -1,6 +1,18 @@
-import './Beranda.css'
+import './Home.css'
+import products from '../products.json'
+import { Link } from 'react-router-dom'
 
-export default function Beranda() {
+
+function formatCurrency(value) {
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(value)
+}
+
+export default function Home() {
   return (
     <div className="beranda">
       <section className="hero">
@@ -30,18 +42,18 @@ export default function Beranda() {
       <section className="products">
         <h2>Our Product</h2>
         <div className="product-container">
-          {Array.from({ length: 5 }).map((_, i) => (
+          {products.slice(0, 5).map((p, i) => (
             <article className="card" key={i}>
               <div className="card-image">
                 <img
-                  src={`/img/Pensil.png`}
-                  alt={`Product ${i + 1}`}
+                  src={p.link_image[0] || '/img/Default.png'}
+                  alt={p.name}
                 />
               </div>
               <div className="card-body">
-                <h3>Product {i + 1}</h3>
-                <p className="price">Rp 15.000,00</p>
-                <button className="more">➜</button>
+                <h3>{p.name}</h3>
+                <p className="price">{formatCurrency(p.price)}</p>
+                <Link className="more" to={`/produk/${p.id}`}>➜</Link>
               </div>
             </article>
           ))}
