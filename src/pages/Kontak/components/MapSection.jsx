@@ -4,9 +4,8 @@ import { FaMap, FaDirections } from 'react-icons/fa';
 
 const MapSection = () => {
   const getDirections = () => {
-    const destination = "Jl. UMKM No. 123, Jakarta Selatan";
-    const url = `https://maps.app.goo.gl/D4MaagFUp93gMeSi6=${encodeURIComponent(destination)}`;
-    window.open(url, '_blank');
+    const url = "https://maps.app.goo.gl/BtSNjoMPXdAaoKV78"; 
+    window.open(url, "_blank");
   };
 
   return (
@@ -18,14 +17,15 @@ const MapSection = () => {
       </div>
       <div className={styles.mapContainer}>
         <iframe
-          src="https://www.google.com/maps/place/Gerbang+Utama+Institut+Teknologi+Sumatera+(Itera)/@-5.3575788,105.3148616,883m/data=!3m1!1e3!4m6!3m5!1s0x2e40c389218e080d:0xf2b5c40fe79e8bba!8m2!3d-5.3575788!4d105.3148616!16s%2Fg%2F11gwkmcmgd?hl=en&entry=ttu&g_ep=EgoyMDI1MTExMS4wIKXMDSoASAFQAw%3D%3D"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen=""
-          loading="lazy"
-          title="Lokasi UMKM Desa Gedung Harapan"
-        />
+  src="https://www.google.com/maps/embed?pb=!4v1763116704974!6m8!1m7!1sB6KC5suZUBpZU1Ffd_PTOg!2m2!1d-5.336933330772118!2d105.3537032212227!3f175.58362!4f0!5f0.7820865974627469"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+  title="Lokasi UMKM Desa Gedung Harapan"
+/>
+
         <div className={styles.mapActions}>
           <button onClick={getDirections} className={styles.directionsBtn}>
             <FaDirections /> Petunjuk Arah

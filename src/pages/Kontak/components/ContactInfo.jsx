@@ -7,7 +7,7 @@ const ContactInfo = () => {
     <>
       {/* Quick Contact */}
       <div className={`${styles.card} ${styles.contactCard}`}>
-        <h3 className={styles.cardTitle}>Informasi Kontak</h3>
+        <h3 className={styles.cardTitle}>Informasi Umum</h3>
         <div className={styles.contactInfo}>
           <div className={styles.infoItem}>
             <FaMapMarkerAlt className={styles.infoIcon} />
@@ -44,8 +44,6 @@ const ContactInfo = () => {
           </div>
         </div>
       </div>
-
-      {/* Social Media Links */}
 
       {/* WhatsApp Quick Chat */}
       <div className={styles.whatsappCard}>
