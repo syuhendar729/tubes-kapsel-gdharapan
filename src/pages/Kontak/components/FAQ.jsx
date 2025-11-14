@@ -15,12 +15,12 @@ const FAQ = () => {
       answer: "Anda dapat memesan melalui website, WhatsApp, atau datang langsung ke toko kami. Proses pemesanan mudah dan cepat dengan berbagai metode pembayaran."
     },
     {
-      question: "Apakah ada pengiriman ke luar kota?",
-      answer: "Ya, kami melayani pengiriman ke seluruh Indonesia dengan kerjasama ekspedisi terpercaya."
+      question: "Apakah produk yang dijual adalah produk lokal atau buatan sendiri?",
+      answer: "Ya, seluruh produk yang kami jual adalah produk lokal yang dibuat langsung oleh warga Kampung Gedung Harapan. Setiap produk dikerjakan secara tradisional dengan bahan pilihan, sehingga memiliki kualitas yang baik dan cita rasa yang khas dari daerah kami."
     },
     {
-      question: "Apakah produk bergaransi?",
-      answer: "Semua produk kami memiliki garansi kualitas. Jika ada masalah, silakan hubungi kami untuk penggantian."
+      question: "Berapa lama proses pembuatan atau pengiriman produk setelah dipesan?",
+      answer: "Proses pembuatan dan pengiriman membutuhkan waktu sekitar 4–5 hari untuk wilayah sekitar Kota Baru, Lampung Selatan. Waktu dapat bervariasi tergantung jumlah pesanan dan kondisi cuaca, namun kami selalu berusaha mengirim secepat mungkin."
     }
   ];
 
