@@ -19,9 +19,8 @@ const ContactInfo = () => {
           <div className={styles.infoItem}>
             <FaPhoneAlt className={styles.infoIcon} />
             <div>
-              <p className={styles.infoLabel}>Telepon</p>
-              <p className={styles.infoText}>(021) 1234-5678</p>
-              <p className={styles.infoText}>+62 812-3456-7890</p>
+              <p className={styles.infoLabel}>Telepon / WhatsApp</p>
+              <p className={styles.infoText}>+62 838-0133-6796</p>
             </div>
           </div>
         </div>

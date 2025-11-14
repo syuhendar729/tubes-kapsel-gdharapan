@@ -105,11 +105,32 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--primary-brown), var(--light-brown));
-  color: var(--white);
-  padding: 5rem 1rem;
+  height: 460px;
+  background-image: url('/img/hero.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
   text-align: center;
+  align-content: center;
+  color: var(--white);
 }
+
+/* Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+  z-index: 1;
+}
+
+.hero * {
+  position: relative;
+  z-index: 2; /* agar teks tidak tertutup overlay */
+}
+
 
 .heroContent {
   max-width: 800px;

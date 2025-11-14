@@ -33,16 +33,8 @@ const Kontak = () => {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h2 className={styles.heroTitle}>Hubungi Kami</h2>
-          <p className={styles.heroSubtitle}>Kami siap melayani dan menjawab pertanyaan Anda</p>
-          <div className={styles.heroBadges}>
-            <div className={styles.badge}>
-              <span>📞</span> Siaga 24/7
-            </div>
-            <div className={styles.badge}>
-              <span>🚚</span> Pengiriman Cepat
-            </div>
-          </div>
+          <h2 className={styles.heroTitle}>Dukungan untuk Pelanggan Setia</h2>
+          <p className={styles.heroSubtitle}>Kami hadir untuk memastikan pengalaman belanja Anda nyaman dan mudah.</p>
         </div>
       </section>
 
