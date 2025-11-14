@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import Beranda from './pages/Beranda'
 import Produk from './pages/Produk'
 import TentangKami from './pages/TentangKami'
-import Kontak from './pages/Kontak'
+import Kontak from './pages/Kontak/Kontak';
 
 function App() {
   return (
