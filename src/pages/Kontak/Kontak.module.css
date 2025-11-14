@@ -705,3 +705,34 @@
   max-height: 300px;
   padding: 16px 18px 18px;
 }
+
+.mapSection {
+  margin-top: 3rem;
+}
+
+.mapContainer {
+  width: 100%;
+  height: 500px; /* Atur tinggi map */
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.mapActions {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.directionsBtn {
+  background: var(--primary-brown);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
