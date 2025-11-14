@@ -19,7 +19,7 @@ const Kontak = () => {
 
   return (
     <div className={styles.kontakPage}>
-      {/* Toast Notification */}
+      {/*Notification */}
       {showToast && (
         <div className={styles.toast}>
           <FaCheckCircle className={styles.toastIcon} />
