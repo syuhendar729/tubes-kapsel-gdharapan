@@ -48,7 +48,7 @@ const AboutUs = () => {
             <div className="impact-content">
               <h2>Dampak Sosial</h2>
               <p>
-                Setiap pembelian yang Anda lakukan secara langsung berkontribusi pada peningkatan ekonomi keluarga di desa kami, memberdayakan perempuan lokal, serta menjaga kelestarian resep dan tradisi kami untuk generasi mendatang.
+                Setiap pembelian yang Anda lakukan secara langsung berkontribusi pada peningkatan ekonomi keluarga di desa kami, memberdayakan perempuan lokal, serta menjaga kelestarian makanan tradisional kami.
               </p>
             </div>
             
@@ -57,7 +57,7 @@ const AboutUs = () => {
             <div className="cta-content">
               <h2>Dukung Kami</h2>
               <p>
-                Bergabunglah bersama kami dalam melestarikan cita rasa Indonesia. Dengan memilih produk kami, Anda ikut serta dalam cerita positif Desa {namaDesa}.
+                Setiap produk kami membawa cerita dari Desa {namaDesa}. Dengan membelinya, Anda menjadi bagian dari perjalanan kami dalam menjaga cita rasa Indonesia.
               </p>
             </div>
           </div>
