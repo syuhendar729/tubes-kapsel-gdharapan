@@ -1,20 +1,22 @@
 /* Import Font dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 
-/* --- Variabel Warna & Tema --- */
+/* --- Variabel Warna & Tema Cokelat Segar --- */
 :root {
-  --primary-green: #2E7D32; /* Hijau utama dari contoh */
-  --light-green: #4CAF50;   /* Hijau lebih terang untuk hover/aksen */
-  --background-color: #F5F5F5; /* Abu-abu sangat muda untuk latar */
-  --text-color: #212121;     /* Teks gelap */
-  --text-light: #757575;     /* Teks secondary */
+  --primary-brown: #5D4037;      /* Cokelat utama, hangat dan kuat */
+  --secondary-brown: #8D6E63;    /* Cokelat lebih terang untuk hover/aksen */
+  --accent-cream: #A1887F;       /* Cokelat krem untuk aksen ringan */
+  --background-cream: #FAF6F2;   /* Latar krem yang sangat segar dan lembut */
+  --text-color: #4E342E;         /* Teks cokelat gelap untuk kontras yang baik */
+  --text-light: #6D4C41;         /* Teks secondary cokelat medium */
   --white-color: #FFFFFF;
+  --divider-color: #D7CCC8;      /* Warna garis pembatas yang lembut */
   --font-family: 'Nunito', sans-serif;
 }
 
 body {
   font-family: var(--font-family);
-  background-color: var(--background-color);
+  background-color: var(--background-cream); /* Menggunakan latar krem yang segar */
   color: var(--text-color);
 }
 
@@ -41,14 +43,14 @@ body {
 .who-we-are-section h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--primary-green);
+  color: var(--primary-brown); /* Judul dengan cokelat utama */
   margin-bottom: 0.5rem;
 }
 
 .who-we-are-section h2 {
   font-size: 1.8rem;
   font-weight: 400;
-  color: var(--text-light);
+  color: var(--text-light); /* Subjudul dengan cokelat medium */
   margin-bottom: 2rem;
 }
 
@@ -60,9 +62,9 @@ body {
   color: var(--text-color);
 }
 
-/* --- Bagian 2: Keunggulan (Kotak Hijau) --- */
+/* --- Bagian 2: Keunggulan (Kotak Cokelat) --- */
 .excellence-section {
-  background-color: var(--primary-green);
+  background-color: var(--primary-brown); /* Mengubah dari hijau ke cokelat utama */
   color: var(--white-color);
   width: 100%;
   padding: 4rem 1rem;
@@ -94,7 +96,7 @@ body {
   opacity: 0.9;
 }
 
-/* --- Bagian 3: Dampak Sosial dan Ajakan (Diperbarui) --- */
+/* --- Bagian 3: Dampak Sosial dan Ajakan --- */
 .impact-and-cta-section {
   width: 100%;
   padding: 4rem 1rem;
@@ -105,43 +107,43 @@ body {
 .columns-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: stretch; /* Membuat semua anak memiliki tinggi yang sama */
+  align-items: stretch;
   gap: 2rem;
   text-align: left;
 }
 
 .impact-content, .cta-content {
-  flex: 1; /* Membuat setiap kolom mengambil ruang yang sama */
+  flex: 1;
 }
 
 .impact-content h2, .cta-content h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--primary-green);
+  color: var(--primary-brown); /* Judul dengan cokelat utama */
   margin-bottom: 1rem;
 }
 
 .impact-content p, .cta-content p {
   font-size: 1rem;
-  color: var(--text-light);
+  color: var(--text-light); /* Paragraf dengan cokelat medium */
   line-height: 1.7;
 }
 
 /* --- Garis Pembatas Vertikal --- */
 .divider {
   width: 1px;
-  background-color: #e0e0e0; /* Warna abu-abu muda untuk garis */
-  align-self: stretch; /* Membuat garis memanjang sejajar dengan konten */
+  background-color: var(--divider-color); /* Warna garis yang sesuai tema */
+  align-self: stretch;
 }
 
 /* --- Wrapper untuk Tombol --- */
 .cta-button-wrapper {
   text-align: center;
-  margin-top: 3rem; /* Jarak antara konten dan tombol */
+  margin-top: 3rem;
 }
 
 .cta-button {
-  background-color: var(--primary-green);
+  background-color: var(--primary-brown); /* Tombol dengan cokelat utama */
   color: var(--white-color);
   border: none;
   padding: 1rem 2.5rem;
@@ -150,13 +152,13 @@ body {
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+  box-shadow: 0 4px 10px rgba(93, 64, 55, 0.3); /* Bayangan dengan warna cokelat */
 }
 
 .cta-button:hover {
-  background-color: var(--light-green);
+  background-color: var(--secondary-brown); /* Hover dengan cokelat lebih terang */
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(46, 125, 50, 0.4);
+  box-shadow: 0 6px 12px rgba(93, 64, 55, 0.4);
 }
 
 /* --- Responsive Design --- */
@@ -169,19 +171,16 @@ body {
     font-size: 1.5rem;
   }
 
-  /* Pada layar mobile, ubah tata letak kolom menjadi vertikal */
   .columns-wrapper {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  /* Sembunyikan garis pembatas di layar mobile */
   .divider {
     display: none;
   }
   
-  /* Beri jarak antar elemen saat vertikal */
   .impact-content, .cta-content {
     width: 100%;
   }
