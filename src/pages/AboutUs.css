@@ -3,14 +3,14 @@
 
 /* --- Variabel Warna & Tema Cokelat Segar --- */
 :root {
-  --primary-brown: #5D4037;      /* Cokelat utama, hangat dan kuat */
-  --secondary-brown: #8D6E63;    /* Cokelat lebih terang untuk hover/aksen */
-  --accent-cream: #A1887F;       /* Cokelat krem untuk aksen ringan */
-  --background-cream: #FAF6F2;   /* Latar krem yang sangat segar dan lembut */
-  --text-color: #4E342E;         /* Teks cokelat gelap untuk kontras yang baik */
-  --text-light: #6D4C41;         /* Teks secondary cokelat medium */
+  --primary-brown: #5D4037;     /* Cokelat utama, hangat dan kuat */
+  --secondary-brown: #8D6E63;   /* Cokelat lebih terang untuk hover/aksen */
+  --accent-cream: #A1887F;      /* Cokelat krem untuk aksen ringan */
+  --background-cream: #FAF6F2;  /* Latar krem yang sangat segar dan lembut */
+  --text-color: #4E342E;        /* Teks cokelat gelap untuk kontras yang baik */
+  --text-light: #6D4C41;        /* Teks secondary cokelat medium */
   --white-color: #FFFFFF;
-  --divider-color: #D7CCC8;      /* Warna garis pembatas yang lembut */
+  --divider-color: #D7CCC8;     /* Warna garis pembatas yang lembut */
   --font-family: 'Nunito', sans-serif;
 }
 
@@ -45,6 +45,8 @@ body {
   font-weight: 700;
   color: var(--primary-brown); /* Judul dengan cokelat utama */
   margin-bottom: 0.5rem;
+  /* --- TAMBAHAN: Efek shadow pada judul --- */
+  text-shadow: 2px 2px 4px rgba(93, 64, 55, 0.15);
 }
 
 .who-we-are-section h2 {
@@ -52,6 +54,8 @@ body {
   font-weight: 400;
   color: var(--text-light); /* Subjudul dengan cokelat medium */
   margin-bottom: 2rem;
+  /* --- TAMBAHAN: Efek shadow pada sub-judul --- */
+  text-shadow: 1px 1px 3px rgba(93, 64, 55, 0.1);
 }
 
 .who-we-are-section p {
@@ -78,6 +82,20 @@ body {
 
 .excellence-item {
   text-align: center;
+  /* --- TAMBAHAN: Persiapan untuk "pop up" --- */
+  padding: 1.5rem; /* Memberi jarak agar shadow terlihat */
+  border-radius: 8px; /* Sudut membulat */
+  background-color: transparent; /* Latar awal transparan */
+  /* Transisi untuk animasi yang mulus */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* --- TAMBAHAN: EFEK POP UP & SHADOW SAAT HOVER --- */
+.excellence-item:hover {
+  transform: translateY(-5px); /* Efek "pop up tipis" */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Efek "kotak shadow" */
+  /* Mengubah warna latar agar lebih menonjol */
+  background-color: var(--secondary-brown); 
 }
 
 .excellence-item .icon {
