@@ -16,7 +16,7 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--background-cream); /* Menggunakan latar krem yang segar */
+  background-color: var(--background-cream);
   color: var(--text-color);
 }
 
@@ -43,7 +43,7 @@ body {
 .who-we-are-section h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--primary-brown); /* Judul dengan cokelat utama */
+  color: var(--primary-brown);
   margin-bottom: 0.5rem;
   /* Efek shadow pada judul */
   text-shadow: 2px 2px 4px rgba(93, 64, 55, 0.15);
@@ -52,7 +52,7 @@ body {
 .who-we-are-section h2 {
   font-size: 1.8rem;
   font-weight: 400;
-  color: var(--text-light); /* Subjudul dengan cokelat medium */
+  color: var(--text-light);
   margin-bottom: 2rem;
   /* Efek shadow pada sub-judul */
   text-shadow: 1px 1px 3px rgba(93, 64, 55, 0.1);
@@ -68,7 +68,7 @@ body {
 
 /* --- Bagian 2: Keunggulan (Kotak Cokelat) --- */
 .excellence-section {
-  background-color: var(--primary-brown); /* Mengubah dari hijau ke cokelat utama */
+  background-color: var(--primary-brown);
   color: var(--white-color);
   width: 100%;
   padding: 4rem 1rem;
@@ -82,16 +82,16 @@ body {
 
 .excellence-item {
   text-align: center;
-  padding: 1.5rem; /* Memberi jarak agar shadow terlihat */
-  border-radius: 8px; /* Sudut membulat */
-  background-color: transparent; /* Latar awal transparan */
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: transparent;
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 /* EFEK POP UP & SHADOW SAAT HOVER */
 .excellence-item:hover {
-  transform: translateY(-5px); /* Efek "pop up tipis" */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Efek "kotak shadow" */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   background-color: var(--secondary-brown); 
 }
 
@@ -129,38 +129,37 @@ body {
 
 .impact-content, .cta-content {
   flex: 1;
-  /* --- TAMBAHAN: Styling untuk membuat kotak --- */
-  background-color: var(--white-color); /* Latar putih untuk kotak */
-  border-radius: 10px; /* Sudut membulat */
-  padding: 2rem; /* Ruang di dalam kotak */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan awal kotak */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transisi untuk hover */
+  background-color: var(--white-color);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* --- TAMBAHAN: Efek hover untuk kotak Dampak Sosial dan Dukung Kami --- */
+/* EFEK HOVER */
 .impact-content:hover, .cta-content:hover {
-  transform: translateY(-8px); /* Sedikit terangkat */
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Bayangan lebih jelas */
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
 }
 
 
 .impact-content h2, .cta-content h2 {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--primary-brown); /* Judul dengan cokelat utama */
+  color: var(--primary-brown);
   margin-bottom: 1rem;
 }
 
 .impact-content p, .cta-content p {
   font-size: 1rem;
-  color: var(--text-light); /* Paragraf dengan cokelat medium */
+  color: var(--text-light);
   line-height: 1.7;
 }
 
 /* --- Garis Pembatas Vertikal --- */
 .divider {
   width: 1px;
-  background-color: var(--divider-color); /* Warna garis yang sesuai tema */
+  background-color: var(--divider-color);
   align-self: stretch;
 }
 
@@ -171,7 +170,7 @@ body {
 }
 
 .cta-button {
-  background-color: var(--primary-brown); /* Tombol dengan cokelat utama */
+  background-color: var(--primary-brown);
   color: var(--white-color);
   border: none;
   padding: 1rem 2.5rem;
@@ -180,11 +179,11 @@ body {
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(93, 64, 55, 0.3); /* Bayangan dengan warna cokelat */
+  box-shadow: 0 4px 10px rgba(93, 64, 55, 0.3);
 }
 
 .cta-button:hover {
-  background-color: var(--secondary-brown); /* Hover dengan cokelat lebih terang */
+  background-color: var(--secondary-brown);
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(93, 64, 55, 0.4);
 }
@@ -211,11 +210,10 @@ body {
   
   .impact-content, .cta-content {
     width: 100%;
-    margin-bottom: 1.5rem; /* Tambah jarak antar kartu di mobile */
-    /* Pastikan efek hover tetap berfungsi di mobile jika ada touch event */
+    margin-bottom: 1.5rem; /* Jarak antar kartu di mobile */
   }
   
   .cta-content {
-    margin-top: 0; /* Atur ulang margin-top di mobile karena sudah ada margin-bottom */
+    margin-top: 0;
   }
 }
