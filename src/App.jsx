@@ -4,7 +4,8 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import AboutUs from './pages/AboutUs'
-import Contact from './pages/Contact'
+// import Contact from './pages/Contact'
+import Contact from './pages/Kontak/Kontak'
 import ProductDetail from './pages/ProductDetail'
 
 function App() {
