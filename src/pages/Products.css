@@ -69,6 +69,10 @@
   font-weight: 600;
 }
 
+/* icon helpers */
+.icon { display: inline-block; vertical-align: middle; margin-left: 6px; }
+.icon-left { display: inline-block; vertical-align: middle; margin-right: 8px; }
+
 @media (max-width: 600px) {
   .product-image img {
     height: 140px;

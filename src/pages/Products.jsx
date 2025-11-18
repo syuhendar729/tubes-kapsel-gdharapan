@@ -1,6 +1,7 @@
 import './Products.css'
 import products from '../products.json'
 import { Link } from 'react-router-dom'
+import { FiShoppingCart } from 'react-icons/fi'
 
 function formatCurrency(value) {
   return new Intl.NumberFormat('id-ID', {
@@ -30,7 +31,7 @@ export default function Products() {
             <div className="product-body">
               <h3 className="product-title">{p.name}</h3>
               <div className="product-price">{formatCurrency(p.price)}</div>
-              <Link className="btn-view" to={`/produk/${p.id}`}>Lihat Produk</Link>
+              <Link className="btn-view" to={`/produk/${p.id}`}><FiShoppingCart className="icon-left"/>Lihat Produk</Link>
             </div>
           </article>
         ))}

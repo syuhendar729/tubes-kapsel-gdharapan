@@ -1,14 +1,14 @@
 import './ProductDetail.css'
 import { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { FiShoppingCart, FiPhone, FiMinus, FiPlus, FiChevronRight } from 'react-icons/fi'
+import { ImOffice } from "react-icons/im";
 import products from '../products.json'
 
 function formatCurrency(value) {
   return new Intl.NumberFormat('id-ID', {
     style: 'currency',
-    currency: 'IDR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
+    currency: 'IDR'
   }).format(value)
 }
 
@@ -22,32 +22,40 @@ export default function ProductDetail() {
     : product && product.link_image
     ? [product.link_image]
     : [defaultImage]
-  const [mainImage, setMainImage] = useState(images[0])
+
+  const [mainImage, setMainImage] = useState(images[0] || defaultImage)
 
   if (!product) {
     return (
       <div className="product-detail-page">
         <p>Produk tidak ditemukan.</p>
-        <Link to="/produk" className="btn-back">Kembali ke Produk</Link>
+        <Link to="/products" className="btn-back">Kembali ke Produk</Link>
       </div>
     )
   }
 
+  const mapEmbed = product.location
+    ? `https://www.google.com/maps?q=${product.location}&hl=id&z=16&output=embed`
+    : null
+
   return (
     <div className="product-detail-page">
       <div className="breadcrumb">
-        <Link to="/products">Produk</Link> <span>&gt;</span> Detail Produk
+        <Link to="/products">Produk</Link>
+        <FiChevronRight className="icon" />
+        <span>{product.name}</span>
       </div>
 
-      <div className="detail-inner">
-        <div className="detail-media">
-          <img className="main-img" src={mainImage || defaultImage} alt={product.name} />
+      <div className="detail-card">
+        <div className="detail-left">
+          <img className="main-img" src={mainImage} alt={product.name} />
+
           {images.length > 1 && (
-            <div className="thumbs">
+            <div className="thumb-grid">
               {images.map((src, i) => (
                 <button
                   key={i}
-                  className={`thumb ${src === mainImage ? 'active' : ''}`}
+                  className={`thumb-item ${src === mainImage ? 'active' : ''}`}
                   onClick={() => setMainImage(src)}
                 >
                   <img src={src} alt={`${product.name} ${i + 1}`} />
@@ -57,43 +65,41 @@ export default function ProductDetail() {
           )}
         </div>
 
-        <div className="detail-info">
-          <h1 className="product-name">{product.name}</h1>
+        <div className="detail-right">
+          <h1 className="title">{product.name}</h1>
           <div className="price">{formatCurrency(product.price)}</div>
 
-          <div className="qty-box">
-            <label>Qty:</label>
-            <div className="qty-control">
-              <button>-</button>
-              <span>1</span>
-              <button>+</button>
-            </div>
-          </div>
-
           <div className="desc-box">
-            <h3>Description:</h3>
+            <h3>Deskripsi</h3>
             <p>{product.description}</p>
           </div>
 
           <div className="buttons">
             <button className="btn-buy">
-              🛒 Beli Produk
-              <small>Dikunjungi: {product.visited ?? 0}</small>
+              <FiShoppingCart className="icon-left" /> Beli Produk
             </button>
 
             <a href={`https://wa.me/${product.contact}`} className="btn-wa" target="_blank" rel="noreferrer">
-              💬 Hubungi Penjual
-              <small>{product.contact}</small>
+              <FiPhone className="icon-left" /> Hubungi Penjual
             </a>
           </div>
 
           <div className="company-box">
-            <span>🏢 {product.company_name || 'Company Name'}</span>
+            <p><ImOffice className="icon-left" /> {product.company_name}</p>
           </div>
 
-          <div className="map-preview">
-            <p>📍 Maps location (preview gmaps)</p>
-          </div>
+          {mapEmbed && (
+            <div className="map-box">
+              <h3>Lokasi Penjual</h3>
+              <iframe
+                src={mapEmbed}
+                width="100%"
+                height="220"
+                loading="lazy"
+                allowFullScreen
+              ></iframe>
+            </div>
+          )}
         </div>
       </div>
     </div>
