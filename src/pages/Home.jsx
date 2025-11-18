@@ -1,6 +1,7 @@
 import './Home.css'
 import products from '../products.json'
 import { Link } from 'react-router-dom'
+import { FiChevronRight } from 'react-icons/fi'
 
 
 function formatCurrency(value) {
@@ -53,14 +54,16 @@ export default function Home() {
               <div className="card-body">
                 <h3>{p.name}</h3>
                 <p className="price">{formatCurrency(p.price)}</p>
-                <Link className="more" to={`/produk/${p.id}`}>➜</Link>
+                <Link className="more" to={`/produk/${p.id}`}><FiChevronRight className="icon"/></Link>
               </div>
             </article>
           ))}
         </div>
 
         <div className="show-more">
+          <Link to="/products">
           <button className="btn-secondary">Show More</button>
+          </Link>
         </div>
       </section>
 

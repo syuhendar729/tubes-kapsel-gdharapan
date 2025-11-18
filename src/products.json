@@ -8,20 +8,20 @@
         "stocks": 100,
         "visited": 50,
         "description": "Keripik pisang adalah makanan ringan populer di Indonesia yang terbuat dari irisan buah pisang, biasanya pisang kepok, yang digoreng hingga renyah. Camilan ini tersedia dalam berbagai rasa, seperti asin gurih, manis, atau cokelat.",
-        "link_image": ["/img/Default.png"],
-        "location": [-7.250445, 112.768845]
+        "link_image": ["/img/kripik-pisang.jpg", "/img/kripik-pisang2.jpg"],
+        "location": [-5.333559, 105.349698]
     },
     {
         "id": "p2",
-        "name": "Sambal Cumi Asin",
+        "name": "Pie Pisang",
         "price": 25000,
         "contact": "082132456789",
         "company_name": "Rasa Nusantara",
         "stocks": 60,
         "visited": 42,
-        "description": "Sambal cumi asin khas Jawa Timur dengan cita rasa pedas gurih, cocok untuk lauk nasi hangat atau oleh-oleh khas daerah.",
-        "link_image": ["/img/Default.png"],
-        "location": [-7.983908, 112.621391]
+        "description": "Pie pisang adalah kue tradisional Indonesia yang terbuat dari pisang yang dibungkus dengan adonan tepung dan dipanggang hingga matang. Rasanya manis dan teksturnya lembut, cocok sebagai camilan atau oleh-oleh.",
+        "link_image": ["/img/pie-pisang.jpg", "/img/pie-pisang2.jpg"],
+        "location": [-5.333559, 105.349698]
     },
     {
         "id": "p3",
@@ -32,91 +32,7 @@
         "stocks": 80,
         "visited": 67,
         "description": "Kopi robusta asli Lampung dengan aroma kuat dan cita rasa khas pekat, dikemas dalam 250 gram kemasan aluminium foil.",
-        "link_image": ["/img/Default.png"],
-        "location": [-5.429739, 105.262825]
-    },
-    {
-        "id": "p4",
-        "name": "Batik Tulis Pekalongan",
-        "price": 180000,
-        "contact": "081367452090",
-        "company_name": "Galeri Batik Ayu",
-        "stocks": 25,
-        "visited": 30,
-        "description": "Batik tulis khas Pekalongan dengan motif parang modern, menggunakan pewarna alami yang ramah lingkungan.",
-        "link_image": ["/img/Default.png"],
-        "location": [-6.888024, 109.675644]
-    },
-    {
-        "id": "p5",
-        "name": "Madu Hutan Asli",
-        "price": 75000,
-        "contact": "081245679321",
-        "company_name": "Alam Sehat",
-        "stocks": 50,
-        "visited": 40,
-        "description": "Madu murni yang diambil langsung dari hutan liar Indonesia, tanpa campuran tambahan, baik untuk daya tahan tubuh.",
-        "link_image": ["/img/Default.png"],
-        "location": [-6.914744, 107.609810]
-    },
-    {
-    "id": "p6",
-    "name": "Keripik Pisang",
-        "price": 10000,
-        "contact": "081319306262",
-        "company_name": "Dapur Buah",
-        "stocks": 100,
-        "visited": 50,
-        "description": "Keripik pisang adalah makanan ringan populer di Indonesia yang terbuat dari irisan buah pisang, biasanya pisang kepok, yang digoreng hingga renyah. Camilan ini tersedia dalam berbagai rasa, seperti asin gurih, manis, atau cokelat.",
-        "link_image": "/img/Default.png",
-        "location": [-7.250445, 112.768845]
-    },
-    {
-        "id": "p7",
-        "name": "Sambal Cumi Asin",
-        "price": 25000,
-        "contact": "082132456789",
-        "company_name": "Rasa Nusantara",
-        "stocks": 60,
-        "visited": 42,
-        "description": "Sambal cumi asin khas Jawa Timur dengan cita rasa pedas gurih, cocok untuk lauk nasi hangat atau oleh-oleh khas daerah.",
-        "link_image": ["/img/Default.png"],
-        "location": [-7.983908, 112.621391]
-    },
-    {
-        "id": "p8",
-        "name": "Kopi Robusta Lampung",
-        "price": 35000,
-        "contact": "081278901234",
-        "company_name": "Kopi Lestari",
-        "stocks": 80,
-        "visited": 67,
-        "description": "Kopi robusta asli Lampung dengan aroma kuat dan cita rasa khas pekat, dikemas dalam 250 gram kemasan aluminium foil.",
-        "link_image": ["/img/Default.png"],
-        "location": [-5.429739, 105.262825]
-    },
-    {
-        "id": "p9",
-        "name": "Batik Tulis Pekalongan",
-        "price": 180000,
-        "contact": "081367452090",
-        "company_name": "Galeri Batik Ayu",
-        "stocks": 25,
-        "visited": 30,
-        "description": "Batik tulis khas Pekalongan dengan motif parang modern, menggunakan pewarna alami yang ramah lingkungan.",
-        "link_image": ["/img/Default.png"],
-        "location": [-6.888024, 109.675644]
-    },
-    {
-        "id": "p10",
-        "name": "Madu Hutan Asli",
-        "price": 75000,
-        "contact": "081245679321",
-        "company_name": "Alam Sehat",
-        "stocks": 50,
-        "visited": 40,
-        "description": "Madu murni yang diambil langsung dari hutan liar Indonesia, tanpa campuran tambahan, baik untuk daya tahan tubuh.",
-        "link_image": ["/img/Default.png"],
-        "location": [-6.914744, 107.609810]
+        "link_image": ["/img/kopi.jpeg"],
+        "location": [-5.333559, 105.349698]
     }
 ]

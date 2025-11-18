@@ -7,8 +7,12 @@ import AboutUs from './pages/AboutUs'
 // import Contact from './pages/Contact'
 import Contact from './pages/Kontak/Kontak'
 import ProductDetail from './pages/ProductDetail'
+import AdminProduct from './pages/AdminProduct'
+
+
 
 function App() {
+
   return (
     <Router>
         <Navbar />
@@ -19,6 +23,8 @@ function App() {
             <Route path="/produk/:id" element={<ProductDetail />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/crud" element={<AdminProduct />} />
           </Routes>
         </main>
       
