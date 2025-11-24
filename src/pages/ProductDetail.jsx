@@ -1,9 +1,10 @@
 import './ProductDetail.css'
-import { useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
-import { FiShoppingCart, FiPhone, FiMinus, FiPlus, FiChevronRight } from 'react-icons/fi'
+import { useState, useEffect } from 'react'
+import { useParams, Link, useLocation } from 'react-router-dom'
+import { FiShoppingCart, FiPhone, FiChevronRight } from 'react-icons/fi'
 import { ImOffice } from "react-icons/im";
-import products from '../products.json'
+import { db } from '../api/firebaseConfig'
+import { doc, getDoc } from "firebase/firestore"
 
 function formatCurrency(value) {
   return new Intl.NumberFormat('id-ID', {
@@ -14,26 +15,46 @@ function formatCurrency(value) {
 
 export default function ProductDetail() {
   const { id } = useParams()
-  const product = products.find(p => String(p.id) === id)
+  const location = useLocation()
 
+  // ⭐ Data dari Products.jsx
+  const stateProduct = location.state?.product
+
+  const [product, setProduct] = useState(stateProduct || null)
+  const [loading, setLoading] = useState(!stateProduct)
+
+  // ⭐ Jika user buka langsung via URL, fetch data dari Firestore
+  const fetchProduct = async () => {
+    try {
+      const docRef = doc(db, "umkm_products", id)
+      const snap = await getDoc(docRef)
+      if (snap.exists()) {
+        setProduct(snap.data())
+      }
+    } catch (err) {
+      console.error("Error loading product:", err)
+    }
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    if (!stateProduct) fetchProduct()
+  }, [])
+
+  if (loading) return <p className="product-detail-page">Memuat detail produk...</p>
+  if (!product) return <p className="product-detail-page">Produk tidak ditemukan.</p>
+
+  // ⭐ Ambil gambar utama
   const defaultImage = '/img/Default.png'
-  const images = product && Array.isArray(product.link_image)
+  const images = Array.isArray(product.link_image)
     ? product.link_image
-    : product && product.link_image
+    : product.link_image
     ? [product.link_image]
     : [defaultImage]
 
   const [mainImage, setMainImage] = useState(images[0] || defaultImage)
 
-  if (!product) {
-    return (
-      <div className="product-detail-page">
-        <p>Produk tidak ditemukan.</p>
-        <Link to="/products" className="btn-back">Kembali ke Produk</Link>
-      </div>
-    )
-  }
-
+  // ⭐ Google Maps Embed
   const mapEmbed = product.location
     ? `https://www.google.com/maps?q=${product.location}&hl=id&z=16&output=embed`
     : null
@@ -75,7 +96,7 @@ export default function ProductDetail() {
           </div>
 
           <div className="buttons">
-            <a href={`${product.link_olshop}`} className="btn-buy" target="_blank" rel="noreferrer">
+            <a href={product.link_olshop} className="btn-buy" target="_blank" rel="noreferrer">
               <FiShoppingCart className="icon-left" /> Beli Produk
             </a>
 

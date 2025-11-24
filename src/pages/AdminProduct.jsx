@@ -36,6 +36,7 @@ export default function AdminProduct() {
   const [previews, setPreviews] = useState([]); // object URLs for selected files
   const [imageFiles, setImageFiles] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
+  const [saving, setSaving] = useState(false);
   const colRef = collection(db, "umkm_products");
 
   // Fetch semua produk
@@ -91,43 +92,49 @@ export default function AdminProduct() {
   };
 
   const handleSubmit = async () => {
-    const autoId = isEditing ? form.id : generateNextId();
+    if (saving) return; // prevent duplicate clicks
+    setSaving(true);
+    try {
+      const autoId = isEditing ? form.id : generateNextId();
 
-    // Upload gambar
-    const urlImages = await uploadImages(autoId);
+      const urlImages = await uploadImages(autoId);
 
-    const payload = {
-      ...form,
-      id: autoId,
-      price: Number(form.price),
-      stocks: Number(form.stocks),
-      link_image: urlImages,
-      location: form.location.split(",").map(Number),
-    };
+      const payload = {
+        ...form,
+        id: autoId,
+        price: Number(form.price),
+        stocks: Number(form.stocks),
+        link_image: urlImages,
+        location: form.location.split(",").map(Number),
+      };
 
-    if (isEditing) {
-      await updateDoc(doc(db, "umkm_products", form.docId), payload);
-    } else {
-      // ⭐ Create document with custom ID p1, p2, ...
-      await setDoc(doc(db, "umkm_products", autoId), payload);
+      if (isEditing) {
+        await updateDoc(doc(db, "umkm_products", form.docId), payload);
+      } else {
+        await setDoc(doc(db, "umkm_products", autoId), payload);
+      }
+
+      setForm({
+        id: "",
+        name: "",
+        description: "",
+        price: "",
+        contact: "",
+        company_name: "",
+        stocks: "",
+        location: "",
+        link_image: [],
+      });
+      setPreviews([]);
+      setImageFiles([]);
+      setIsEditing(false);
+      fetchProducts();
+    } catch (e) {
+      console.error("Gagal menyimpan produk:", e);
+      alert("Terjadi kesalahan saat menyimpan produk");
+    } finally {
+      setSaving(false);
     }
-
-    // Reset form
-    setForm({
-      id: "",
-      name: "",
-      description: "",
-      price: "",
-      contact: "",
-      company_name: "",
-      stocks: "",
-      location: "",
-      link_image: [],
-    });
-    setPreviews([]);
-    setImageFiles([]);
-    setIsEditing(false);
-    fetchProducts();
   };
 
   const handleEdit = (p) => {
@@ -136,13 +143,16 @@ export default function AdminProduct() {
   };
 
   const handleDelete = async (productId) => {
-    // ⭐ Delete all images in folder
-    await deleteImageFolder(productId);
-
-    // Delete Firestore document
-    await deleteDoc(doc(db, "umkm_products", productId));
-
-    fetchProducts();
+    const ok = window.confirm(`Hapus produk ${productId}? Tindakan ini tidak dapat dibatalkan.`);
+    if (!ok) return;
+    try {
+      await deleteImageFolder(productId);
+      await deleteDoc(doc(db, "umkm_products", productId));
+      fetchProducts();
+    } catch (e) {
+      console.error("Gagal menghapus produk:", e);
+      alert("Terjadi kesalahan saat menghapus produk");
+    }
   };
 
   return (
@@ -163,12 +173,17 @@ export default function AdminProduct() {
 
           <input name="location" placeholder="Lokasi (lat, lng)" value={form.location} onChange={handleChange} />
 
+          <input name="link_olshop" placeholder="Link Olshop" value={form.link_olshop} onChange={handleChange} />
+
           <input type="file" multiple onChange={(e) => setImageFiles([...e.target.files])} />
         </div>
 
-        <button className="btn-save" onClick={handleSubmit}>
-          {isEditing ? "Simpan Perubahan" : "Tambah Produk"}
+        <button className="btn-save" onClick={handleSubmit} disabled={saving} aria-busy={saving}>
+          {saving ? "Menyimpan..." : isEditing ? "Simpan Perubahan" : "Tambah Produk"}
         </button>
+        {saving && (
+          <div className="saving-indicator">Mengunggah gambar & menyimpan data...</div>
+        )}
       </div>
 
       <div className="table-container">
