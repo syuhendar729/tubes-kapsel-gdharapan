@@ -16,6 +16,7 @@ export default function Products() {
   return (
     <div className="products-page">
       <header className="products-header">
+        <div className="products-hero" role="img" aria-label="Produk UMKM Gedong Harapan"></div>
         <h2>Produk Unggulan UMKM Kami</h2>
       </header>
 
