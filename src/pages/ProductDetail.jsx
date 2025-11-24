@@ -75,9 +75,9 @@ export default function ProductDetail() {
           </div>
 
           <div className="buttons">
-            <button className="btn-buy">
+            <a href={`${product.link_olshop}`} className="btn-buy" target="_blank" rel="noreferrer">
               <FiShoppingCart className="icon-left" /> Beli Produk
-            </button>
+            </a>
 
             <a href={`https://wa.me/${product.contact}`} className="btn-wa" target="_blank" rel="noreferrer">
               <FiPhone className="icon-left" /> Hubungi Penjual
